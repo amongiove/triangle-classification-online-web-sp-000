@@ -11,6 +11,7 @@ class Triangle
   def legal?
     if side_1 && side_2 && side_3 > 0
       true
+    end
   end
 
   def kind
