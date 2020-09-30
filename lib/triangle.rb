@@ -14,16 +14,20 @@ class Triangle
   end
 
   def kind
-    if
-    if @side_1 == @side_2 && @side_1 == @side_3 && @side_2 == @side_3
-      :equilateral
-    elsif @side_1 == @side_2 || @side_2 == @side_3 || @side_1 == @side_3
-      :isosceles
-    elsif @side_1 != @side_2 && @side_2 != @side_3 && @side_1 != @side_3
-      :scalene
-    else
+    if legal? == true
+      if @side_1 == @side_2 && @side_1 == @side_3 && @side_2 == @side_3
+        :equilateral
+      elsif @side_1 == @side_2 || @side_2 == @side_3 || @side_1 == @side_3
+        :isosceles
+      elsif @side_1 != @side_2 && @side_2 != @side_3 && @side_1 != @side_3
+        :scalene
+      else
+        raise TriangleError
+      end
+    else 
       raise TriangleError
     end
+      
   end
 
   class TriangleError < StandardError
