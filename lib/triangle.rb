@@ -10,13 +10,12 @@ class Triangle
 
   def kind(side_1, side_2, side_3)
     if side_1 == side_2 == side_3
-      @kind = equilateral
+      equilateral
     elsif side_1 == side_2 || side_2 == side_3 || side_1 == side_3
-      @kind = isosceles
+      isosceles
     else
-      @kind = scalene
+      scalene
     end
-    @kind
   end
 
 
