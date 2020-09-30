@@ -24,10 +24,10 @@ class Triangle
       else
         raise TriangleError
       end
-    else 
+    else
       raise TriangleError
     end
-      
+
   end
 
   class TriangleError < StandardError
